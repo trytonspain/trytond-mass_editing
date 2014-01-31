@@ -270,7 +270,6 @@ class MassEditingWizard(Wizard):
                                 ]})
                 elif value == 'add':
                     res.update({split_key: [('add', vals.get(split_key, []))]})
-        print res
         if res:
             instances = EditingModel.browse(Transaction().context.get(
                     'active_ids'))
