@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form string="Mass Editing">
+    <label name="model"/>
+    <field name="model"/>
+    <field name="model_fields" colspan="4"/>
+    <group id="buttons" colspan="4">
+        <button name="create_keyword" string="Create Keyword"/>
+        <button name="remove_keyword" string="Remove Keyword"/>
+    </group>
+</form>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record id="view_mass_editing_tree" model="ir.ui.view">
+            <field name="model">mass.editing</field>
+            <field name="type">tree</field>
+            <field name="name">mass_editing_tree</field>
+        </record>
+        <record id="view_mass_editing_form" model="ir.ui.view">
+            <field name="model">mass.editing</field>
+            <field name="type">form</field>
+            <field name="name">mass_editing_form</field>
+        </record>
+        <record model="ir.action.act_window" id="action_mass_editing_view">
+            <field name="name">Mass Editing</field>
+            <field name="res_model">mass.editing</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_mass_editing_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_mass_editing_tree"/>
+            <field name="act_window" ref="action_mass_editing_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_mass_editing_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="view_mass_editing_form"/>
+            <field name="act_window" ref="action_mass_editing_view"/>
+        </record>
+        <record model="ir.ui.view" id="view_mass_editing_wizard_start">
+            <field name="model">mass.editing.wizard.start</field>
+            <field name="type">form</field>
+            <field name="name">mass_edit_wizard_start</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_mass_editing">
+            <field name="name">Massive Update</field>
+            <field name="wiz_name">mass.editing.wizard</field>
+        </record>
+
+        <record model="ir.model.access" id="access_mass_editing">
+            <field name="model" search="[('model', '=', 'mass.editing')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_mass_editing_admin">
+            <field name="model" search="[('model', '=', 'mass.editing')]"/>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <menuitem name="Mass Editing" id="massediting_menu" parent="ir.menu_administration"/>
+        <menuitem action="action_mass_editing_view"
+            id="menu_mass_editing"
+            parent="massediting_menu"/>
+    </data>
+</tryton>

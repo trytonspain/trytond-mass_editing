@@ -1,0 +1,151 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:mass.editing.wizard.start:"
+msgid "Add"
+msgstr "Añadir"
+
+msgctxt "error:mass.editing.wizard.start:"
+msgid "Remove"
+msgstr "Eliminar"
+
+msgctxt "error:mass.editing.wizard.start:"
+msgid "Remove All"
+msgstr "Eliminar todos"
+
+msgctxt "error:mass.editing.wizard.start:"
+msgid "Set"
+msgstr "Establecer"
+
+msgctxt "error:mass.editing:"
+msgid "Mass Edit must be unique per model."
+msgstr "Sólo puede existir una actualización massiva por modelo"
+
+msgctxt "field:mass.editing,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:mass.editing,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:mass.editing,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:mass.editing,keyword:"
+msgid "Keyword"
+msgstr "Acción de teclado"
+
+msgctxt "field:mass.editing,model:"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "field:mass.editing,model_fields:"
+msgid "Fields"
+msgstr "Campos"
+
+msgctxt "field:mass.editing,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:mass.editing,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:mass.editing,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:mass.editing-ir.model.field,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:mass.editing-ir.model.field,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:mass.editing-ir.model.field,field:"
+msgid "Field"
+msgstr "Campo"
+
+msgctxt "field:mass.editing-ir.model.field,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:mass.editing-ir.model.field,mass_edit:"
+msgid "Mass"
+msgstr "Masiva"
+
+msgctxt "field:mass.editing-ir.model.field,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:mass.editing-ir.model.field,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:mass.editing-ir.model.field,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:mass.editing.wizard.start,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "model:ir.action,name:action_mass_editing_view"
+msgid "Mass Editing"
+msgstr "Actualización Massiva"
+
+msgctxt "model:ir.action,name:wizard_mass_editing"
+msgid "Massive Update"
+msgstr "Actualización Massiva"
+
+msgctxt "model:ir.ui.menu,name:massediting_menu"
+msgid "Mass Editing"
+msgstr "Actualización Massiva"
+
+msgctxt "model:ir.ui.menu,name:menu_mass_editing"
+msgid "Mass Editing"
+msgstr "Actualización Massiva"
+
+msgctxt "model:mass.editing,name:"
+msgid "Mass Edit"
+msgstr "Actualización Massiva"
+
+msgctxt "model:mass.editing-ir.model.field,name:"
+msgid "Mass Edit Fields"
+msgstr "Campos Actualización Massiva"
+
+msgctxt "model:mass.editing.wizard.start,name:"
+msgid "Mass Edit Wizard Start"
+msgstr "Inicio Assitente Actualización Massiva"
+
+msgctxt "view:mass.editing.wizard.start:"
+msgid "Mass Editing Wizard"
+msgstr "Assitente Actualización Massiva"
+
+msgctxt "view:mass.editing.wizard.start:"
+msgid "Select fields to update."
+msgstr "Seleccionar campos a actualizar"
+
+msgctxt "view:mass.editing:"
+msgid "Create Keyword"
+msgstr "Crear acceso"
+
+msgctxt "view:mass.editing:"
+msgid "Mass Editing"
+msgstr "Actualización Massiva"
+
+msgctxt "view:mass.editing:"
+msgid "Remove Keyword"
+msgstr "Eliminar acceso"
+
+msgctxt "wizard_button:mass.editing.wizard,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:mass.editing.wizard,start,update:"
+msgid "Apply"
+msgstr "Aplicar"
