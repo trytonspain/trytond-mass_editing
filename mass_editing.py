@@ -264,9 +264,9 @@ class MassEditingWizard(Wizard):
                                     ]})
                     else:
                         res.update({split_key: None})
-                elif value == 'remove_m2m':
+                elif value == 'remove_all':
                     res.update({split_key: [
-                                ("unlink_all")
+                                ('unlink_all',)
                                 ]})
                 elif value == 'add':
                     res.update({split_key: [('add', vals.get(split_key, []))]})
