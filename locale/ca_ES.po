@@ -24,11 +24,11 @@ msgstr "Només es permet una actualització massiva per model"
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
-msgstr "Data de creació"
+msgstr "Data  creació"
 
 msgctxt "field:mass.editing,create_uid:"
 msgid "Create User"
-msgstr "Usuari de creació"
+msgstr "Usuari creació"
 
 msgctxt "field:mass.editing,id:"
 msgid "ID"
@@ -60,11 +60,11 @@ msgstr "Usuari modificació"
 
 msgctxt "field:mass.editing-ir.model.field,create_date:"
 msgid "Create Date"
-msgstr "Data de creació"
+msgstr "Data creació"
 
 msgctxt "field:mass.editing-ir.model.field,create_uid:"
 msgid "Create User"
-msgstr "Usuari de creació"
+msgstr "Usuari creació"
 
 msgctxt "field:mass.editing-ir.model.field,field:"
 msgid "Field"
@@ -132,7 +132,7 @@ msgstr "Seleccioneu els camps a actualitzar"
 
 msgctxt "view:mass.editing:"
 msgid "Create Keyword"
-msgstr "Crear Accès"
+msgstr "Crea assistent"
 
 msgctxt "view:mass.editing:"
 msgid "Mass Editing"
@@ -140,7 +140,7 @@ msgstr "Edició Massiva"
 
 msgctxt "view:mass.editing:"
 msgid "Remove Keyword"
-msgstr "Eliminar Accès"
+msgstr "Elimina assistent"
 
 msgctxt "wizard_button:mass.editing.wizard,start,end:"
 msgid "Cancel"
