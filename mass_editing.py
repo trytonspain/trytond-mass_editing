@@ -122,6 +122,9 @@ class MassEditWizardStart(ModelView):
                     'readonly': {},
                     'invisible': {},
                     }
+            if fields[field.name].get('required'):
+                fields[field.name]['required'] = False
+
             if fields[field.name].get('on_change'):
                 fields[field.name]['on_change'] = []
             if fields[field.name].get('on_change_with'):
