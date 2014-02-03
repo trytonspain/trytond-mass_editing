@@ -21,7 +21,7 @@ class MassEdit(ModelSQL, ModelView):
             ('model', '=', Eval('model', 0)),
             ],
         depends=['model'])
-    keyword = fields.Many2One('ir.action.keyword', 'Keyword')
+    keyword = fields.Many2One('ir.action.keyword', 'Keyword', readonly=True)
 
     @classmethod
     def __setup__(cls):
@@ -33,8 +33,12 @@ class MassEdit(ModelSQL, ModelView):
                 'unique_model': 'Mass Edit must be unique per model.',
                 })
         cls._buttons.update({
-                'create_keyword': {},
-                'remove_keyword': {},
+                'create_keyword': {
+                    'invisible': Eval('keyword'),
+                    },
+                'remove_keyword': {
+                    'invisible': ~Eval('keyword'),
+                    },
                 })
 
     @classmethod
