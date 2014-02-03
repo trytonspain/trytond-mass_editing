@@ -24,11 +24,11 @@ msgstr "Sólo puede existir una actualización massiva por modelo"
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:mass.editing,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:mass.editing,id:"
 msgid "ID"
@@ -60,11 +60,11 @@ msgstr "Usuario modificación"
 
 msgctxt "field:mass.editing-ir.model.field,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:mass.editing-ir.model.field,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:mass.editing-ir.model.field,field:"
 msgid "Field"
@@ -132,7 +132,7 @@ msgstr "Seleccionar campos a actualizar"
 
 msgctxt "view:mass.editing:"
 msgid "Create Keyword"
-msgstr "Crear acceso"
+msgstr "Crear asistente"
 
 msgctxt "view:mass.editing:"
 msgid "Mass Editing"
@@ -140,7 +140,7 @@ msgstr "Actualización Massiva"
 
 msgctxt "view:mass.editing:"
 msgid "Remove Keyword"
-msgstr "Eliminar acceso"
+msgstr "Eliminar asistente"
 
 msgctxt "wizard_button:mass.editing.wizard,start,end:"
 msgid "Cancel"
