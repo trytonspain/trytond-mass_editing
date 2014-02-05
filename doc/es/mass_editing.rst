@@ -12,6 +12,10 @@ seleccionados.
 Esta funcionalidad es muy común por ejemplo en los casos de los productos. Poder seleccionar
 varios productos a la vez y hacer una edición en todos ellos con el mismo valor.
 
+.. |menu_mass_editing| tryref:: mass_editing.massediting_menu/complete_name
+
+.. inheritref:: mass_editing/mass_editing:section:configuracion
+
 Configuración
 -------------
 
@@ -25,6 +29,8 @@ Esto nos creará un nuevo asistente disponible en el modelo.
 
 El orden de los campos del asistente de edición será según a medida que el administrador vaya añadiendo
 campos en la configuración de la "Edición masiva".
+
+.. inheritref:: mass_editing/mass_editing:section:uso
 
 Uso
 ---
