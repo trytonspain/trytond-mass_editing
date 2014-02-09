@@ -96,15 +96,15 @@ msgstr "Identificador"
 
 msgctxt "model:ir.action,name:action_mass_editing_view"
 msgid "Mass Editing"
-msgstr "Edició Massiva"
+msgstr "Edició massiva"
 
 msgctxt "model:ir.action,name:wizard_mass_editing"
 msgid "Massive Update"
-msgstr "Actualització Massiva"
+msgstr "Actualització massiva"
 
 msgctxt "model:ir.ui.menu,name:massediting_menu"
 msgid "Mass Editing"
-msgstr "Edició Massiva"
+msgstr "Edició massiva"
 
 msgctxt "model:ir.ui.menu,name:menu_mass_editing"
 msgid "Mass Editing"
@@ -112,7 +112,7 @@ msgstr "Edició Massiva"
 
 msgctxt "model:mass.editing,name:"
 msgid "Mass Edit"
-msgstr "Edició Massiva"
+msgstr "Edició massiva"
 
 msgctxt "model:mass.editing-ir.model.field,name:"
 msgid "Mass Edit Fields"
@@ -120,11 +120,11 @@ msgstr "Camps d'edicció massiva"
 
 msgctxt "model:mass.editing.wizard.start,name:"
 msgid "Mass Edit Wizard Start"
-msgstr "Inici Assitent Edició Massiva"
+msgstr "Inici assitent edició massiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Mass Editing Wizard"
-msgstr "Assitent Edició Massiva"
+msgstr "Assitent edició massiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Select fields to update."
@@ -136,7 +136,7 @@ msgstr "Crea assistent"
 
 msgctxt "view:mass.editing:"
 msgid "Mass Editing"
-msgstr "Edició Massiva"
+msgstr "Edició massiva"
 
 msgctxt "view:mass.editing:"
 msgid "Remove Keyword"
