@@ -170,7 +170,12 @@ class MassEditWizardStart(ModelView):
             xml_group = etree.SubElement(form, 'group', {
                     'col': '2',
                     'colspan': '4',
+                    })
+            etree.SubElement(xml_group, 'label', {
+                    'id': "label_%s" % field.name,
                     'string': fields[field.name]['string'],
+                    'xalign': '0.0',
+                    'colspan': '4',
                     })
             etree.SubElement(xml_group, 'field', {
                     'name': "selection_%s" % field.name,
