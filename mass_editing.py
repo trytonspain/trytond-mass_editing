@@ -31,6 +31,8 @@ class MassEdit(ModelSQL, ModelView):
             ]
         cls._error_messages.update({
                 'unique_model': 'Mass Edit must be unique per model.',
+                'not_modelsql': 'Model "%s" does not store information '
+                    'to an SQL table.',
                 })
         cls._buttons.update({
                 'create_keyword': {
@@ -40,6 +42,15 @@ class MassEdit(ModelSQL, ModelView):
                     'invisible': ~Eval('keyword'),
                     },
                 })
+
+    @classmethod
+    def validate(cls, massedits):
+        super(MassEdit, cls).validate(massedits)
+        for massedit in massedits:
+            Model = Pool().get(massedit.model.model)
+            if not issubclass(Model, ModelSQL):
+                cls.raise_user_error('not_modelsql',
+                    (massedit.model.rec_name,))
 
     @classmethod
     @ModelView.button
