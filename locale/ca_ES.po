@@ -22,6 +22,10 @@ msgctxt "error:mass.editing:"
 msgid "Mass Edit must be unique per model."
 msgstr "Només es permet una actualització massiva per model"
 
+msgctxt "error:mass.editing:"
+msgid "Model \"%s\" does not store information to an SQL table."
+msgstr "El model \"%s\" no emmagatzema informació a una taula de SQL."
+
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
 msgstr "Data  creació"
