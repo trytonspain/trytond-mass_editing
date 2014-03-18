@@ -20,11 +20,15 @@ msgstr "Establecer"
 
 msgctxt "error:mass.editing:"
 msgid "Mass Edit must be unique per model."
-msgstr "Sólo puede existir una actualización massiva por modelo"
+msgstr "Sólo puede existir una actualización masiva por modelo."
 
 msgctxt "error:mass.editing:"
 msgid "Model \"%s\" does not store information to an SQL table."
-msgstr "El modelo \"%s\" no almacena información a una tabla de SQL."
+msgstr "El modelo \"%s\" no almacena información en una tabla SQL."
+
+msgctxt "error:mass.editing:"
+msgid "unique_model"
+msgstr "Modelo único"
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
@@ -36,11 +40,11 @@ msgstr "Usuario creación"
 
 msgctxt "field:mass.editing,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:mass.editing,keyword:"
 msgid "Keyword"
-msgstr "Acción de teclado"
+msgstr "Asistente"
 
 msgctxt "field:mass.editing,model:"
 msgid "Model"
@@ -76,7 +80,7 @@ msgstr "Campo"
 
 msgctxt "field:mass.editing-ir.model.field,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:mass.editing-ir.model.field,mass_edit:"
 msgid "Mass"
@@ -96,43 +100,43 @@ msgstr "Usuario modificación"
 
 msgctxt "field:mass.editing.wizard.start,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "model:ir.action,name:action_mass_editing_view"
 msgid "Mass Editing"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "model:ir.action,name:wizard_mass_editing"
 msgid "Massive Update"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "model:ir.ui.menu,name:massediting_menu"
 msgid "Mass Editing"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "model:ir.ui.menu,name:menu_mass_editing"
 msgid "Mass Editing"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "model:mass.editing,name:"
 msgid "Mass Edit"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "model:mass.editing-ir.model.field,name:"
 msgid "Mass Edit Fields"
-msgstr "Campos Actualización Massiva"
+msgstr "Campos actualización masiva"
 
 msgctxt "model:mass.editing.wizard.start,name:"
 msgid "Mass Edit Wizard Start"
-msgstr "Inicio Assitente Actualización Massiva"
+msgstr "Inicio asistente actualización masiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Mass Editing Wizard"
-msgstr "Assitente Actualización Massiva"
+msgstr "Asistente actualización masiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Select fields to update."
-msgstr "Seleccionar campos a actualizar"
+msgstr "Seleccione campos a actualizar."
 
 msgctxt "view:mass.editing:"
 msgid "Create Keyword"
@@ -140,7 +144,7 @@ msgstr "Crear asistente"
 
 msgctxt "view:mass.editing:"
 msgid "Mass Editing"
-msgstr "Actualización Massiva"
+msgstr "Actualización masiva"
 
 msgctxt "view:mass.editing:"
 msgid "Remove Keyword"

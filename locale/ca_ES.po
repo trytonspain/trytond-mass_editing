@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:mass.editing.wizard.start:"
 msgid "Add"
-msgstr "Afegir"
+msgstr "Afegeix"
 
 msgctxt "error:mass.editing.wizard.start:"
 msgid "Remove"
@@ -20,15 +20,19 @@ msgstr "Estableix"
 
 msgctxt "error:mass.editing:"
 msgid "Mass Edit must be unique per model."
-msgstr "Només es permet una actualització massiva per model"
+msgstr "Només es permet una actualització massiva per model."
 
 msgctxt "error:mass.editing:"
 msgid "Model \"%s\" does not store information to an SQL table."
-msgstr "El model \"%s\" no emmagatzema informació a una taula de SQL."
+msgstr "El model \"%s\" no emmagatzema informació a una taula SQL."
+
+msgctxt "error:mass.editing:"
+msgid "unique_model"
+msgstr "Model únic"
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
-msgstr "Data  creació"
+msgstr "Data creació"
 
 msgctxt "field:mass.editing,create_uid:"
 msgid "Create User"
@@ -36,11 +40,11 @@ msgstr "Usuari creació"
 
 msgctxt "field:mass.editing,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:mass.editing,keyword:"
 msgid "Keyword"
-msgstr "Acció teclat"
+msgstr "Assistent"
 
 msgctxt "field:mass.editing,model:"
 msgid "Model"
@@ -76,7 +80,7 @@ msgstr "Camp"
 
 msgctxt "field:mass.editing-ir.model.field,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:mass.editing-ir.model.field,mass_edit:"
 msgid "Mass"
@@ -96,7 +100,7 @@ msgstr "Usuari modificació"
 
 msgctxt "field:mass.editing.wizard.start,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "model:ir.action,name:action_mass_editing_view"
 msgid "Mass Editing"
@@ -112,7 +116,7 @@ msgstr "Edició massiva"
 
 msgctxt "model:ir.ui.menu,name:menu_mass_editing"
 msgid "Mass Editing"
-msgstr "Edició Massiva"
+msgstr "Edició massiva"
 
 msgctxt "model:mass.editing,name:"
 msgid "Mass Edit"
@@ -120,19 +124,19 @@ msgstr "Edició massiva"
 
 msgctxt "model:mass.editing-ir.model.field,name:"
 msgid "Mass Edit Fields"
-msgstr "Camps d'edicció massiva"
+msgstr "Camps d'edició massiva"
 
 msgctxt "model:mass.editing.wizard.start,name:"
 msgid "Mass Edit Wizard Start"
-msgstr "Inici assitent edició massiva"
+msgstr "Inici assistent edició massiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Mass Editing Wizard"
-msgstr "Assitent edició massiva"
+msgstr "Assistent edició massiva"
 
 msgctxt "view:mass.editing.wizard.start:"
 msgid "Select fields to update."
-msgstr "Seleccioneu els camps a actualitzar"
+msgstr "Seleccioneu els camps a actualitzar."
 
 msgctxt "view:mass.editing:"
 msgid "Create Keyword"
@@ -148,7 +152,7 @@ msgstr "Elimina assistent"
 
 msgctxt "wizard_button:mass.editing.wizard,start,end:"
 msgid "Cancel"
-msgstr "Cancel·lat"
+msgstr "Cancel·la"
 
 msgctxt "wizard_button:mass.editing.wizard,start,update:"
 msgid "Apply"
