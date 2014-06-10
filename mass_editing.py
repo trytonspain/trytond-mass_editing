@@ -202,7 +202,7 @@ class MassEditWizardStart(ModelView):
         return res
 
     @classmethod
-    def default_get(cls, fields, with_rec_name=True):
+    def default_get(cls, fields, with_rec_name=True, with_on_change=True):
         pool = Pool()
         context = Transaction().context
         model = context.get('active_model', None)
@@ -210,7 +210,7 @@ class MassEditWizardStart(ModelView):
         res = dict.fromkeys([f for f in fields
                     if f[:10] == 'selection_'], '')
         res.update(EditingModel.default_get([f for f in fields
-                    if f[:10] != 'selection_'], with_rec_name))
+                    if f[:10] != 'selection_'], with_rec_name, with_on_change))
         return res
 
 
