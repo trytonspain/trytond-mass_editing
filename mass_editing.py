@@ -283,14 +283,18 @@ class MassEditingWizard(Wizard):
                 elif value == 'remove':
                     if xxx2many:
                         res.update({split_key: [
-                                    ("unlink", vals.get(split_key, []))
+                                    ("remove", vals.get(split_key, []))
                                     ]})
                     else:
                         res.update({split_key: None})
                 elif value == 'remove_all':
-                    res.update({split_key: [
-                                ('unlink_all',)
-                                ]})
+                    xxx2m_ids = set()
+                    records = EditingModel.search([
+                        ('id', 'in', Transaction().context.get('active_ids'))])
+                    for record in records:
+                        xxx2m_ids |= set([r.id for r in getattr(
+                            record, _field.name)])
+                    res.update({split_key: [('remove', list(xxx2m_ids))]})
                 elif value == 'add':
                     res.update({split_key: [('add', vals.get(split_key, []))]})
         if res:
