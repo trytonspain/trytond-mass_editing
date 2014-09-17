@@ -273,7 +273,14 @@ class MassEditingWizard(Wizard):
                                 to_set.append(val)
                         to_write = []
                         if to_set:
-                            to_write.append(('set', to_set),)
+                            xxx2m_ids = set()
+                            records = EditingModel.search([
+                                ('id', 'in', Transaction().context.get('active_ids'))])
+                            for record in records:
+                                xxx2m_ids |= set([r.id for r in getattr(
+                                    record, _field.name)])
+                            to_write.append(('remove', list(xxx2m_ids)))
+                            to_write.append(('add', to_set))
                         if to_create:
                             to_write.append(('create', to_create),)
                         if to_write:
