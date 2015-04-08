@@ -1,10 +1,16 @@
+# The COPYRIGHT file at the top level of this repository contains the full
+# copyright notices and license terms.
 from lxml import etree
+try:
+    import simplejson as json
+except ImportError:
+    import json
 
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.model import ModelView, ModelSQL, fields
-from trytond.pyson import Eval
+from trytond.pyson import Eval, PYSONDecoder, PYSONEncoder
 
 __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
     'MassEditingWizard']
@@ -110,6 +116,17 @@ class MassEditWizardStart(ModelView):
 
     @classmethod
     def fields_view_get(cls, view_id=None, view_type='form'):
+        class Decoder(json.JSONDecoder):
+
+            def __init__(self, context=None):
+                self.__context = context or {}
+                super(Decoder, self).__init__(object_hook=self._object_hook)
+
+            def _object_hook(self, dct):
+                if '__class__' in dct:
+                    return 'REMOVE_CLAUSE'
+                return dct
+
         pool = Pool()
         MassEdit = pool.get('mass.editing')
 
@@ -144,8 +161,15 @@ class MassEditWizardStart(ModelView):
                 fields[field.name]['on_change'] = []
             if fields[field.name].get('on_change_with'):
                 fields[field.name]['on_change_with'] = []
+
             if fields[field.name].get('domain'):
-                fields[field.name]['domain'] = None
+                old_domain = Decoder().decode(fields[field.name]['domain'])
+                new_domain = []
+                for clause in old_domain:
+                    if 'REMOVE_CLAUSE' not in str(clause):
+                        new_domain.append(clause)
+                fields[field.name]['domain'] = \
+                    PYSONEncoder().encode(new_domain)
 
             if field.ttype in ['many2many', 'one2many']:
                 selection_vals = [
