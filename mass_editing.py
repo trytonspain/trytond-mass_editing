@@ -144,9 +144,8 @@ class MassEditWizardStart(ModelView):
                 fields[field.name]['on_change'] = []
             if fields[field.name].get('on_change_with'):
                 fields[field.name]['on_change_with'] = []
-            #TODO: Check domain with pyson. In case of domain, if the domain
-            #clause contains and Eval it must be removed. If it's a static
-            #domain it must be the same.
+            if fields[field.name].get('domain'):
+                fields[field.name]['domain'] = None
 
             if field.ttype in ['many2many', 'one2many']:
                 selection_vals = [
