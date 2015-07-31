@@ -96,8 +96,10 @@ class MassEditFields(ModelSQL):
     'Mass Edit Fields'
     __name__ = 'mass.editing-ir.model.field'
 
-    mass_edit = fields.Many2One('mass.editing', 'Mass', required=True)
-    field = fields.Many2One('ir.model.field', 'Field', required=True)
+    mass_edit = fields.Many2One('mass.editing', 'Mass', required=True,
+        ondelete='CASCADE')
+    field = fields.Many2One('ir.model.field', 'Field', required=True,
+        ondelete='CASCADE')
 
 
 class MassEditWizardStart(ModelView):
