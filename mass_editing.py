@@ -278,6 +278,8 @@ class MassEditingWizard(Wizard):
                 split_key = field.split('_', 1)[1]
                 _field = getattr(EditingModel, split_key, None)
                 xxx2many = False
+                if isinstance(_field, fields.Function) and _field.setter:
+                    _field = _field._field  # Use original field
                 if (isinstance(_field, fields.One2Many) or
                      isinstance(_field, fields.Many2Many)):
                     xxx2many = True
