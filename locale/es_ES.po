@@ -26,10 +26,6 @@ msgctxt "error:mass.editing:"
 msgid "Model \"%s\" does not store information to an SQL table."
 msgstr "El modelo \"%s\" no almacena información en una tabla SQL."
 
-msgctxt "error:mass.editing:"
-msgid "unique_model"
-msgstr "Modelo único"
-
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
 msgstr "Fecha creación"
