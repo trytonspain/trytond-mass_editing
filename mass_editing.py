@@ -9,7 +9,7 @@ except ImportError:
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.wizard import Wizard, StateView, StateTransition, Button
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval, PYSONDecoder, PYSONEncoder
 
 __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
@@ -32,11 +32,12 @@ class MassEdit(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(MassEdit, cls).__setup__()
+        t = cls.__table__()
         cls._sql_constraints += [
-            ('model_uniq', 'unique (model)', 'unique_model')
-            ]
+            ('model_uniq', Unique(t, t.model),
+             'Mass Edit must be unique per model.')
+        ]
         cls._error_messages.update({
-                'unique_model': 'Mass Edit must be unique per model.',
                 'not_modelsql': 'Model "%s" does not store information '
                     'to an SQL table.',
                 })
