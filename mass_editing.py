@@ -10,7 +10,7 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.model import ModelView, ModelSQL, fields, Unique
-from trytond.pyson import Eval, PYSONDecoder, PYSONEncoder
+from trytond.pyson import Eval, PYSONEncoder
 
 __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
     'MassEditingWizard']
