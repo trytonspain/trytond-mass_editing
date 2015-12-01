@@ -1,27 +1,18 @@
-#!/usr/bin/env python
+# This file is part of the mass_editing module for Tryton.
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 import unittest
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import test_view, test_depends
+from trytond.tests.test_tryton import ModuleTestCase
 
 
-class TestCase(unittest.TestCase):
-    'Test module'
-
-    def setUp(self):
-        trytond.tests.test_tryton.install_module('mass_editing')
-
-    def test0005views(self):
-        'Test views'
-        test_view('mass_editing')
-
-    def test0006depends(self):
-        'Test depends'
-        test_depends()
+class MassEditingTestCase(ModuleTestCase):
+    'Test Mass Editing module'
+    module = 'mass_editing'
 
 
 def suite():
     suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestCase))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
+        MassEditingTestCase))
     return suite
