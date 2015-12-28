@@ -2,7 +2,7 @@
 Edición Masiva
 ==============
 
-A |menu_mass_editing| dispondremos de la configuración para la edición de varios registros.
+En el menu |menu_mass_editing| dispondremos de la configuración para la edición de varios registros.
 Dispondremos en los modelos un nuevo asistente que nos permitirá hacer modificaciones para varios
 registros a la vez.
 
@@ -19,15 +19,15 @@ varios productos a la vez y hacer una edición en todos ellos con el mismo valor
 Configuración
 -------------
 
-Una Edición Masiva consiste en:
+Los components que forman una Edición Masiva son:
 
-* Modelo con el que lo relacionamos
-* Campos que dispondremos en el asistente para editar
+* Un modelo con el que lo relacionamos
+* Los campos que dispondremos en el asistente para editar
 
-Para disponer el asistente en el modelo para editar debemos accionar el botón "Crear asistente".
-Esto nos creará un nuevo asistente disponible en el modelo.
+Para disponer del asistente en el modelo, para editar, debemos accionar el botón "Crear asistente".
+Esto nos creará un nuevo asistente, disponible en el modelo.
 
-El orden de los campos del asistente de edición será según a medida que el administrador vaya añadiendo
+El orden de los campos del asistente de edición seguirá el orden según el administrador vaya añadiendo
 campos en la configuración de la "Edición masiva".
 
 .. inheritref:: mass_editing/mass_editing:section:uso
@@ -35,10 +35,10 @@ campos en la configuración de la "Edición masiva".
 Uso
 ---
 
-Accionaremos el asistente o acción que disponemos en el modelo. En este asistente nos listaran todos
-los campos que se permiten hacer una edición.
+Accionaremos el asistente o acción que disponemos en el modelo, en este asistente nos listarán todos
+en los campos que se permiten hacer una edición.
 
-Un campo para editar podremos escoger las opciones:
+En un campo dónde podamos editar podremos escoger las opciones:
 
 * Establecer. Añade o modifica el campo
 * Eliminar. Elimina el contenido del campo
@@ -51,6 +51,6 @@ Para los campos relacionados dispondremos de más opciones:
 Campos requeridos
 -----------------
 
-En el caso que seleccionamos la opción de "Establecer" o "Eliminar" y no hemos introducido un valor
-a modificar, nos alertará con un mensaje el campo requerido. Deberemos deseleccionar la opción si
+En el caso que seleccionemos la opción "Establecer" o "Eliminar" y no hayamos introducido un valor
+a modificar, nos alertará con un mensaje en el campo requerido. Deberemos deseleccionar la opción si
 no deseamos realizar ninguna tarea o rellenar un valor para ese campo.
