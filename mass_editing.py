@@ -38,8 +38,8 @@ class MassEdit(ModelSQL, ModelView):
              'Mass Edit must be unique per model.')
         ]
         cls._error_messages.update({
-                'not_modelsql': 'Model "%s" does not store information '
-                    'to an SQL table.',
+                'not_modelsql': ('Model "%s" does not store information '
+                    'to an SQL table.'),
                 })
         cls._buttons.update({
                 'create_keyword': {
@@ -253,10 +253,10 @@ class MassEditingWizard(Wizard):
     'Mass Edit Wizard'
     __name__ = 'mass.editing.wizard'
     start = StateView('mass.editing.wizard.start',
-                      'mass_editing.view_mass_editing_wizard_start', [
-                    Button('Cancel', 'end', 'tryton-cancel'),
-                    Button('Apply', 'update', 'tryton-ok', True),
-                    ])
+          'mass_editing.view_mass_editing_wizard_start', [
+                Button('Cancel', 'end', 'tryton-cancel'),
+                Button('Apply', 'update', 'tryton-ok', True),
+                ])
 
     update = StateTransition()
 
@@ -291,7 +291,7 @@ class MassEditingWizard(Wizard):
                         to_create = []
                         for val in manyvals:
                             if isinstance(val, dict):
-                                #check_xxx2many
+                                # check_xxx2many
                                 for field_name, field_value in val.iteritems():
                                     if isinstance(field_value, list):
                                         val[field_name] = [tuple(['add',
@@ -303,7 +303,9 @@ class MassEditingWizard(Wizard):
                         if to_set:
                             xxx2m_ids = set()
                             records = EditingModel.search([
-                                ('id', 'in', Transaction().context.get('active_ids'))])
+                                ('id', 'in',
+                                    Transaction().context.get('active_ids')),
+                                ])
                             for record in records:
                                 xxx2m_ids |= set([r.id for r in getattr(
                                     record, _field.name)])
