@@ -1,10 +1,7 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from lxml import etree
-try:
-    import simplejson as json
-except ImportError:
-    import json
+import json
 
 from trytond.transaction import Transaction
 from trytond.pool import Pool
