@@ -28,15 +28,15 @@ msgstr "El model \"%s\" no emmagatzema informació a una taula SQL."
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
-msgstr "Data creació"
+msgstr "Data de creació"
 
 msgctxt "field:mass.editing,create_uid:"
 msgid "Create User"
-msgstr "Usuari creació"
+msgstr "Usuari de creació"
 
 msgctxt "field:mass.editing,id:"
 msgid "ID"
-msgstr "ID"
+msgstr "Identificador"
 
 msgctxt "field:mass.editing,keyword:"
 msgid "Keyword"
@@ -56,19 +56,19 @@ msgstr "Nom"
 
 msgctxt "field:mass.editing,write_date:"
 msgid "Write Date"
-msgstr "Data modificació"
+msgstr "Data de modificació"
 
 msgctxt "field:mass.editing,write_uid:"
 msgid "Write User"
-msgstr "Usuari modificació"
+msgstr "Usuari de modificació"
 
 msgctxt "field:mass.editing-ir.model.field,create_date:"
 msgid "Create Date"
-msgstr "Data creació"
+msgstr "Data de creació"
 
 msgctxt "field:mass.editing-ir.model.field,create_uid:"
 msgid "Create User"
-msgstr "Usuari creació"
+msgstr "Usuari de creació"
 
 msgctxt "field:mass.editing-ir.model.field,field:"
 msgid "Field"
@@ -76,7 +76,7 @@ msgstr "Camp"
 
 msgctxt "field:mass.editing-ir.model.field,id:"
 msgid "ID"
-msgstr "ID"
+msgstr "Identificador"
 
 msgctxt "field:mass.editing-ir.model.field,mass_edit:"
 msgid "Mass"
@@ -88,15 +88,15 @@ msgstr "Nom"
 
 msgctxt "field:mass.editing-ir.model.field,write_date:"
 msgid "Write Date"
-msgstr "Data modificació"
+msgstr "Data de modificació"
 
 msgctxt "field:mass.editing-ir.model.field,write_uid:"
 msgid "Write User"
-msgstr "Usuari modificació"
+msgstr "Usuari de modificació"
 
 msgctxt "field:mass.editing.wizard.start,id:"
 msgid "ID"
-msgstr "ID"
+msgstr "Identificador"
 
 msgctxt "model:ir.action,name:action_mass_editing_view"
 msgid "Mass Editing"
