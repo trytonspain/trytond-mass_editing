@@ -16,7 +16,6 @@ __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
 class MassEdit(ModelSQL, ModelView):
     'Mass Edit'
     __name__ = 'mass.editing'
-    _rec_name = 'model'
     model = fields.Many2One('ir.model', 'Model', required=True)
     model_fields = fields.Many2Many('mass.editing-ir.model.field',
         'mass_edit', 'field', 'Fields',
@@ -55,6 +54,9 @@ class MassEdit(ModelSQL, ModelView):
             if not issubclass(Model, ModelSQL):
                 cls.raise_user_error('not_modelsql',
                     (massedit.model.rec_name,))
+
+    def get_rec_name(self, name):
+        return '%s' % (self.model.rec_name)
 
     @classmethod
     @ModelView.button
