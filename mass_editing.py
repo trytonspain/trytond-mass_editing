@@ -280,8 +280,8 @@ class MassEditingWizard(Wizard):
                 xxx2many = False
                 if isinstance(_field, fields.Function) and _field.setter:
                     _field = _field._field  # Use original field
-                if (isinstance(_field, fields.One2Many) or
-                     isinstance(_field, fields.Many2Many)):
+                if (isinstance(_field, fields.One2Many)
+                        or isinstance(_field, fields.Many2Many)):
                     xxx2many = True
                 if value == 'set':
                     if xxx2many:
