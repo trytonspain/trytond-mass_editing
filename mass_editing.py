@@ -306,8 +306,8 @@ class MassEditingWizard(Wizard):
                             for record in records:
                                 xxx2m_ids |= set([r.id for r in getattr(
                                     record, _field.name)])
-                                xxx2m_ids = list(
-                                    xxx2m_ids - set(to_set) - set(to_create))
+                            xxx2m_ids = list(
+                                xxx2m_ids - set(to_set) - set(to_create))
                             to_write.append(('remove', xxx2m_ids))
                             to_write.append(('add', to_set))
                         if to_create:
