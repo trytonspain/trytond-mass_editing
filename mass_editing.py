@@ -135,6 +135,9 @@ class MassEditWizardStart(ModelView):
         res = super(MassEditWizardStart, cls).fields_view_get(view_id,
             view_type)
 
+        if view_type == 'tree':
+            return res
+
         context = Transaction().context
         model = context.get('active_model', None)
         if not model:
@@ -203,6 +206,7 @@ class MassEditWizardStart(ModelView):
                 'string': fields[field.name]['string'],
                 'selection': translated_vals,
                 }
+
             xml_group = etree.SubElement(form, 'group', {
                     'col': '2',
                     'colspan': '4',
