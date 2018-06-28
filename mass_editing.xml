@@ -59,9 +59,9 @@
             <field name="model" search="[('model', '=', 'mass.editing')]"/>
         </record>
         <record model="ir.model.button-res.group"
-            id="remove_keyword_button_group_account">
+            id="remove_keyword_button_group">
             <field name="button" ref="remove_keyword_button"/>
-            <field name="group" ref="access_mass_editing_admin"/>
+            <field name="group" ref="res.group_admin"/>
         </record>
 
         <record model="ir.model.button" id="create_keyword_button">
@@ -72,7 +72,7 @@
         <record model="ir.model.button-res.group"
             id="create_keyword_button_group_account">
             <field name="button" ref="create_keyword_button"/>
-            <field name="group" ref="access_mass_editing_admin"/>
+            <field name="group" ref="res.group_admin"/>
         </record>
 
         <menuitem name="Mass Editing" id="massediting_menu" parent="ir.menu_administration"/>
