@@ -276,11 +276,14 @@ class MassEditingWizard(Wizard):
                 split_key = field.split('_', 1)[1]
                 _field = getattr(EditingModel, split_key, None)
                 xxx2many = False
+                one2many = False
                 if isinstance(_field, fields.Function) and _field.setter:
                     _field = _field._field  # Use original field
                 if (isinstance(_field, fields.One2Many) or
                      isinstance(_field, fields.Many2Many)):
                     xxx2many = True
+                if isinstance(_field, fields.One2Many):
+                    one2many = True
                 if value == 'set':
                     if xxx2many:
                         manyvals = vals.get(split_key, None)
@@ -328,7 +331,8 @@ class MassEditingWizard(Wizard):
                     for record in records:
                         xxx2m_ids |= set([r.id for r in getattr(
                             record, _field.name)])
-                    res.update({split_key: [('remove', list(xxx2m_ids))]})
+                    res.update({split_key: [
+                        ('delete' if one2many else 'remove', list(xxx2m_ids))]})
                 elif value == 'add':
                     res.update({split_key: [('add', vals.get(split_key, []))]})
         if res:
