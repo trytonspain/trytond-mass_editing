@@ -155,10 +155,8 @@ class MassEditWizardStart(ModelView):
                     edit.model_fields]))
         for field in edit.model_fields:
             if fields[field.name].get('states'):
-                fields[field.name]['states'] = {
-                    'readonly': {},
-                    'invisible': {},
-                    }
+                fields[field.name]['states'] = {}
+
             if fields[field.name].get('required'):
                 fields[field.name]['required'] = False
 
