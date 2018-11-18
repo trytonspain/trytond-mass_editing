@@ -154,6 +154,7 @@ class MassEditWizardStart(ModelView):
         fields.update(EditingModel.fields_get([f.name for f in
                     edit.model_fields]))
         for field in edit.model_fields:
+
             if fields[field.name].get('states'):
                 fields[field.name]['states'] = {}
 
@@ -202,27 +203,34 @@ class MassEditWizardStart(ModelView):
             fields['selection_%s' % field.name] = {
                 'type': 'selection',
                 'string': fields[field.name]['string'],
-                'selection': translated_vals,
+                'selection': translated_vals[:],
                 }
 
             xml_group = etree.SubElement(form, 'group', {
                     'col': '2',
                     'colspan': '4',
                     })
-            etree.SubElement(xml_group, 'label', {
-                    'id': "label_%s" % field.name,
-                    'string': fields[field.name]['string'],
-                    'xalign': '0.0',
-                    'colspan': '4',
-                    })
-            etree.SubElement(xml_group, 'field', {
-                    'name': "selection_%s" % field.name,
-                    'colspan': colspan,
-                    })
-            etree.SubElement(xml_group, 'field', {
-                    'name': field.name,
-                    'colspan': colspan,
-                    })
+
+            to_find = ".//label[@id='label_%s']" % field.name
+            if root.find(to_find) is None:
+                etree.SubElement(xml_group, 'label', {
+                        'id': "label_%s" % field.name,
+                        'string': fields[field.name]['string'],
+                        'xalign': '0.0',
+                        'colspan': '4',
+                        })
+            to_find = ".//field[@name='selection_%s']" % field.name
+            if root.find(to_find) is None:
+                etree.SubElement(xml_group, 'field', {
+                        'name': "selection_%s" % field.name,
+                        'colspan': colspan,
+                        })
+            to_find = ".//field[@name='%s']" % field.name
+            if root.find(to_find) is None:
+                etree.SubElement(xml_group, 'field', {
+                        'name': field.name,
+                        'colspan': colspan,
+                        })
 
         res['arch'] = etree.tostring(root)
         res['fields'] = fields
