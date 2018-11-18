@@ -154,6 +154,10 @@ class MassEditWizardStart(ModelView):
         fields.update(EditingModel.fields_get([f.name for f in
                     edit.model_fields]))
         for field in edit.model_fields:
+            to_find = ".//label[@id='label_%s']" % field.name
+            if root.find(to_find) is not None:
+                continue
+
             if fields[field.name].get('states'):
                 fields[field.name]['states'] = {}
 
@@ -204,6 +208,7 @@ class MassEditWizardStart(ModelView):
                 'string': fields[field.name]['string'],
                 'selection': translated_vals,
                 }
+
 
             xml_group = etree.SubElement(form, 'group', {
                     'col': '2',
