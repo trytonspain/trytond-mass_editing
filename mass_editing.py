@@ -200,6 +200,7 @@ class MassEditWizardStart(ModelView):
                 colspan = '2'
 
             fields['selection_%s' % field.name] = {
+                'name': 'selection_%s' % field.name,
                 'type': 'selection',
                 'string': fields[field.name]['string'],
                 'selection': translated_vals,
