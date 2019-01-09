@@ -8,6 +8,8 @@ from trytond.pool import Pool
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval, PYSONEncoder
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
     'MassEditingWizard']
@@ -33,10 +35,6 @@ class MassEdit(ModelSQL, ModelView):
             ('model_uniq', Unique(t, t.model),
              'Mass Edit must be unique per model.')
         ]
-        cls._error_messages.update({
-                'not_modelsql': ('Model "%s" does not store information '
-                    'to an SQL table.'),
-                })
         cls._buttons.update({
                 'create_keyword': {
                     'invisible': Eval('keyword'),
@@ -52,8 +50,8 @@ class MassEdit(ModelSQL, ModelView):
         for massedit in massedits:
             Model = Pool().get(massedit.model.model)
             if not issubclass(Model, ModelSQL):
-                cls.raise_user_error('not_modelsql',
-                    (massedit.model.rec_name,))
+                raise UserError(gettext('massedit.not_modelsql',
+                    model=model.rec_name))
 
     def get_rec_name(self, name):
         return '%s' % (self.model.rec_name)
@@ -109,12 +107,6 @@ class MassEditWizardStart(ModelView):
     @classmethod
     def __setup__(cls):
         super(MassEditWizardStart, cls).__setup__()
-        cls._error_messages.update({
-                'add': 'Add',
-                'remove_all': 'Remove All',
-                'remove': 'Remove',
-                'set': 'Set',
-                })
 
     @classmethod
     def fields_view_get(cls, view_id=None, view_type='form'):
@@ -192,8 +184,8 @@ class MassEditWizardStart(ModelView):
                 ]
             translated_vals = []
             for val in selection_vals:
-                translated_vals.append((val[0], cls.raise_user_error(val[0],
-                            raise_exception=False),))
+                translated_vals.append((val[0],
+                    gettex('mass_editing.%s')%val[0],))
 
             colspan = '1'
             if field.ttype in ['many2many', 'one2many']:
