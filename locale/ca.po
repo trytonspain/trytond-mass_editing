@@ -1,30 +1,6 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
-
-msgctxt "error:mass.editing.wizard.start:"
-msgid "Add"
-msgstr "Afegeix"
-
-msgctxt "error:mass.editing.wizard.start:"
-msgid "Remove"
-msgstr "Elimina"
-
-msgctxt "error:mass.editing.wizard.start:"
-msgid "Remove All"
-msgstr "Elimina'ls tots"
-
-msgctxt "error:mass.editing.wizard.start:"
-msgid "Set"
-msgstr "Estableix"
-
-msgctxt "error:mass.editing:"
-msgid "Mass Edit must be unique per model."
-msgstr "Només es permet una actualització massiva per model."
-
-msgctxt "error:mass.editing:"
-msgid "Model \"%s\" does not store information to an SQL table."
-msgstr "El model \"%s\" no emmagatzema informació a una taula SQL."
 
 msgctxt "field:mass.editing,create_date:"
 msgid "Create Date"
@@ -51,7 +27,7 @@ msgid "Fields"
 msgstr "Camps"
 
 msgctxt "field:mass.editing,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nom"
 
 msgctxt "field:mass.editing,write_date:"
@@ -83,7 +59,7 @@ msgid "Mass"
 msgstr "Massiu"
 
 msgctxt "field:mass.editing-ir.model.field,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nom"
 
 msgctxt "field:mass.editing-ir.model.field,write_date:"
@@ -105,6 +81,34 @@ msgstr "Edició massiva"
 msgctxt "model:ir.action,name:wizard_mass_editing"
 msgid "Massive Update"
 msgstr "Actualització massiva"
+
+msgctxt "model:ir.message,text:add"
+msgid "Add."
+msgstr "Afegir."
+
+msgctxt "model:ir.message,text:not_modelsql"
+msgid "Model \"%(model)s\" does not store information to an SQL table."
+msgstr "El model \"%(model)s\" no emmagatzema informació en una taula SQL."
+
+msgctxt "model:ir.message,text:remove"
+msgid "Remove."
+msgstr "Eliminar."
+
+msgctxt "model:ir.message,text:remove_all"
+msgid "Remove All."
+msgstr "Eliminar tot."
+
+msgctxt "model:ir.message,text:set"
+msgid "Set."
+msgstr "Definir."
+
+msgctxt "model:ir.model.button,string:create_keyword_button"
+msgid "Create Keyword"
+msgstr "Crea assistent"
+
+msgctxt "model:ir.model.button,string:remove_keyword_button"
+msgid "Remove Keyword"
+msgstr "Elimina assistent"
 
 msgctxt "model:ir.ui.menu,name:massediting_menu"
 msgid "Mass Editing"
