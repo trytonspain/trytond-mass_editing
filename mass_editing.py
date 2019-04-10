@@ -296,7 +296,7 @@ class MassEditingWizard(Wizard):
                         for val in manyvals:
                             if isinstance(val, dict):
                                 # check_xxx2many
-                                for field_name, field_value in val.iteritems():
+                                for field_name, field_value in val.items():
                                     if isinstance(field_value, list):
                                         val[field_name] = [tuple(['add',
                                                 field_value])]
