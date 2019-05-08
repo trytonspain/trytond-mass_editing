@@ -185,7 +185,7 @@ class MassEditWizardStart(ModelView):
             translated_vals = []
             for val in selection_vals:
                 translated_vals.append((val[0],
-                    gettex('mass_editing.%s')%val[0],))
+                    gettext('mass_editing.%s')%val[0],))
 
             colspan = '1'
             if field.ttype in ['many2many', 'one2many']:
