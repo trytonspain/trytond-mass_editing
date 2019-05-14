@@ -228,7 +228,7 @@ class MassEditWizardStart(ModelView):
                         'colspan': colspan,
                         })
 
-        res['arch'] = etree.tostring(root)
+        res['arch'] = etree.tostring(root).decode('utf-8')
         res['fields'] = fields
         return res
 
