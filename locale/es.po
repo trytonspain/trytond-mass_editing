@@ -83,24 +83,24 @@ msgid "Massive Update"
 msgstr "Actualización masiva"
 
 msgctxt "model:ir.message,text:add"
-msgid "Add."
-msgstr "Añadir."
+msgid "Add"
+msgstr "Añadir"
 
 msgctxt "model:ir.message,text:not_modelsql"
 msgid "Model \"%(model)s\" does not store information to an SQL table."
 msgstr "El modelo \"%(model)s\" no almacena información en una tabla SQL."
 
 msgctxt "model:ir.message,text:remove"
-msgid "Remove."
-msgstr "Eliminar."
+msgid "Remove"
+msgstr "Eliminar"
 
 msgctxt "model:ir.message,text:remove_all"
-msgid "Remove All."
-msgstr "Eliminar todo."
+msgid "Remove All"
+msgstr "Eliminar todo"
 
 msgctxt "model:ir.message,text:set"
-msgid "Set."
-msgstr "Definir."
+msgid "Set"
+msgstr "Definir"
 
 msgctxt "model:ir.model.button,string:create_keyword_button"
 msgid "Create Keyword"

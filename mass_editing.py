@@ -185,8 +185,8 @@ class MassEditWizardStart(ModelView):
             translated_vals = []
             for val in selection_vals:
                 if val[0]:
-                    translated_vals.append((val[0], gettext('mass_editing.%s')
-                            % val[0]))
+                    translated_vals.append((val[0], gettext('mass_editing.%s' %
+                                val[0])))
                 else:
                     translated_vals.append((val[0], ''))
 
