@@ -7,16 +7,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="text">Model "%(model)s" does not store information to an SQL table.</field>
         </record>
         <record model="ir.message" id="add">
-            <field name="text">Add.</field>
+            <field name="text">Add</field>
         </record>
         <record model="ir.message" id="remove_all">
-            <field name="text">Remove All.</field>
+            <field name="text">Remove All</field>
         </record>
         <record model="ir.message" id="remove">
-            <field name="text">Remove.</field>
+            <field name="text">Remove</field>
         </record>
         <record model="ir.message" id="set">
-            <field name="text">Set.</field>
+            <field name="text">Set</field>
         </record>
     </data>
 </tryton>
