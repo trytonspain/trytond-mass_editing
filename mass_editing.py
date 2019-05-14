@@ -51,7 +51,7 @@ class MassEdit(ModelSQL, ModelView):
             Model = Pool().get(massedit.model.model)
             if not issubclass(Model, ModelSQL):
                 raise UserError(gettext('massedit.not_modelsql',
-                    model=model.rec_name))
+                    model=massedit.rec_name))
 
     def get_rec_name(self, name):
         return '%s' % (self.model.rec_name)
