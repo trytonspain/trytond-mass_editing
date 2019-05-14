@@ -196,6 +196,7 @@ class MassEditWizardStart(ModelView):
                 'type': 'selection',
                 'string': fields[field.name]['string'],
                 'selection': translated_vals,
+                'help': '',
                 }
 
             xml_group = etree.SubElement(form, 'group', {
