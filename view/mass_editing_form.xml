@@ -7,7 +7,7 @@ contains the full copyright notices and license terms. -->
     <field name="model_fields" colspan="4"/>
     <group id="buttons" colspan="4">
         <field name="keyword" invisible="1"/>
-        <button name="create_keyword" string="Create Keyword"/>
-        <button name="remove_keyword" string="Remove Keyword"/>
+        <button name="create_keyword"/>
+        <button name="remove_keyword"/>
     </group>
 </form>
