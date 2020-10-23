@@ -14,6 +14,8 @@ from trytond.exceptions import UserError
 __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
     'MassEditingWizard']
 
+PAGE_FIELDS = 10
+
 
 class MassEdit(ModelSQL, ModelView):
     'Mass Edit'
@@ -145,7 +147,20 @@ class MassEditWizardStart(ModelView):
 
         fields.update(EditingModel.fields_get([f.name for f in
                     edit.model_fields]))
-        for field in edit.model_fields:
+
+        # add notebook if many fields
+        pages = []
+        if len(edit.model_fields) > PAGE_FIELDS:
+            field_string = MassEdit.fields_get(['model_fields']
+                )['model_fields']['string']
+            notebook = etree.SubElement(form, 'notebook', {})
+            for x in range(0, (len(edit.model_fields) // PAGE_FIELDS) + 1):
+                pages.append(etree.SubElement(notebook, 'page', {
+                        'string': '%s (%s)' % (field_string, x + 1),
+                        'id': 'page_%s' % x,
+                }))
+
+        for x, field in enumerate(edit.model_fields):
             if fields[field.name].get('states'):
                 fields[field.name]['states'] = {}
 
@@ -202,7 +217,8 @@ class MassEditWizardStart(ModelView):
                 'help': '',
                 }
 
-            xml_group = etree.SubElement(form, 'group', {
+            xml_parent = form if not pages else pages[x // PAGE_FIELDS]
+            xml_group = etree.SubElement(xml_parent, 'group', {
                     'col': '2',
                     'colspan': '4',
                     })
