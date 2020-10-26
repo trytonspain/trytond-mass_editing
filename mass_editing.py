@@ -300,11 +300,19 @@ class MassEditingWizard(Wizard):
                         for val in manyvals:
                             if isinstance(val, dict):
                                 # check_xxx2many
+                                TargetModel = pool.get(_field.model_name)
+
+                                new_val = val.copy()
                                 for field_name, field_value in val.items():
                                     if isinstance(field_value, list):
-                                        val[field_name] = [tuple(['add',
+                                        new_val[field_name] = [tuple(['add',
                                                 field_value])]
-                                to_create.append(val)
+                                    target_field = TargetModel._fields[field_name]
+                                    if (isinstance(target_field, fields.Function)
+                                        and not target_field.setter):
+                                            del new_val[field_name]
+
+                                to_create.append(new_val)
                             else:
                                 to_set.append(val)
                         to_write = []
