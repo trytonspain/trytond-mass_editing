@@ -18,7 +18,8 @@ __all__ = ['MassEdit', 'MassEditFields', 'MassEditWizardStart',
 class MassEdit(ModelSQL, ModelView):
     'Mass Edit'
     __name__ = 'mass.editing'
-    model = fields.Many2One('ir.model', 'Model', required=True)
+    model = fields.Many2One('ir.model', 'Model', required=True,
+        ondelete='CASCADE')
     model_fields = fields.Many2Many('mass.editing-ir.model.field',
         'mass_edit', 'field', 'Fields',
         domain=[
